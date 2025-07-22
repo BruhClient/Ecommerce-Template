@@ -20,7 +20,8 @@ export default auth((req) => {
     nextUrl.pathname.includes(API_ROUTE_PREFIX) ||
     nextUrl.pathname.includes(ACCOUNT_VERIFICATION_PREFIX) ||
     nextUrl.pathname.includes(UPLOADTHING_PREFIX) ||
-    nextUrl.pathname.includes(STRIPE_WEBHOOK_ROUTE)
+    nextUrl.pathname.includes(STRIPE_WEBHOOK_ROUTE) ||
+    nextUrl.pathname.includes("/studio")
   ) {
     return NextResponse.next();
   }
